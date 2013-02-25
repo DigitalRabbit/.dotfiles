@@ -249,3 +249,18 @@ endif " }}} - VimFiler
 
 endif " }}} - vimproc
 
+" -------------------------------------------------------------
+" Android particular settings
+" -------------------------------------------------------------
+function! s:my_android_settings(path)
+    let l:files = findfile('AndroidManifest.xml', escape(a:path, ' ') . ';',  -1)
+    for file in reverse(files)
+        silent execute 'lcd' fnamemodify(file, ':h')
+    endfor
+endfunction
+
+augroup MyAndroid
+    autocmd!
+    autocmd BufNewFile,BufReadPost * call s:my_android_settings(expand('<afile>:p:h'))
+augroup END
+
