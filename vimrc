@@ -189,14 +189,14 @@ let g:unite_split_rule='botright'
 let g:unite_winheight=10
 
 " Open Unite buffer list
-nnoremap <silent> [b :<C-u>Unite buffer<CR>
+nnoremap <silent> <Leader>b :<C-u>Unite buffer<CR>
 " Open Unite help (a select word).
-nnoremap <silent> [h :<C-u>Unite help<CR>
-nnoremap <silent> [wh :<C-u>UniteWithCursorWord help<CR>
+nnoremap <silent> <Leader>h :<C-u>Unite help<CR>
+nnoremap <silent> <Leader>wh :<C-u>UniteWithCursorWord help<CR>
 " Open the register list in Unite.
-nnoremap <silent> [r :<C-u>Unite register<CR>
+nnoremap <silent> <Leader>r :<C-u>Unite register<CR>
 " Open the Unite bookmark in Unite.
-nnoremap <silent> [a :<C-u>Unite bookmark<CR>
+nnoremap <silent> <Leader>a :<C-u>Unite bookmark<CR>
 " Search the word which the cursor is on. (directory recursive grep)
 nnoremap <silent><expr> <F3> ':Unite -no-quit grep:' .
             \ input("path: ", getcwd()) .
