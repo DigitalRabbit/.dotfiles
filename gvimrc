@@ -7,7 +7,11 @@
 " -------------------------------------------------------------
 " Only GUI
 if has('gui_running')
-    set guioptions+=b   " Enable the horizontal scroll bar.
+    set guioptions-=m   " Desable the menu bar
+    set guioptions-=T   " Desable the tool bar
+    set guioptions-=L   " Desable the vertical scroll bar (left).
+    set guioptions-=r   " Desable the vertical scroll bar (right).
+    set guioptions-=b   " Desable the horizontal scroll bar.
 endif
 
 if has('win32')
